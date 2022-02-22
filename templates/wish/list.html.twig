@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+
+{% block titre %}
+{{ titre }} | {{ parent() }}
+{% endblock %}
+
+
+{% block main %}
+<br>
+<div class="container">
+        <!-- etape 2 ouverture de ligne -->
+        <div class="row">
+            <!-- etape 3  -->
+            
+            <h1>Ma liste de voyages</h1>
+            
+            <div class=" col-4">
+            <br>
+                <table class="table table-striped"> {#pour avoir des couleurs différentes à chaque ligne#}
+                    <thead>
+                        <tr bgcolor="#87CEEB">
+                            <th>Pays</th>
+                            <th>Activité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for b in bucketlist %}
+                        <tr>
+                            <td>{{b.pays}}</td>
+                            <td>{{b.activite}}</td>
+
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                    <tfoot>
+                        <tr  bgcolor="#87CEEB" align="center">
+                            <th colspan="3">Fin de la liste</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}
