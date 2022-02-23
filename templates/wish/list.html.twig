@@ -15,27 +15,32 @@
             
             <h1>Ma liste de voyages</h1>
             
-            <div class=" col-4">
+            <div class=" col-6">
             <br>
                 <table class="table table-striped"> {#pour avoir des couleurs différentes à chaque ligne#}
                     <thead>
                         <tr bgcolor="#87CEEB">
                             <th>Pays</th>
                             <th>Activité</th>
+                            <th>Date départ</th>
+                            <th>Budget</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for b in bucketlist %}
                         <tr>
-                            <td>{{b.pays}}</td>
-                            <td>{{b.activite}}</td>
+                            <td align="center">{{b.pays}}</td>
+                            <td align="center">{{b.activite}}</td>
+                            <td align="center">{{b.date}}</td>
+                            <td align="center">{{b.budget}}</td>
 
                         </tr>
                         {% endfor %}
                     </tbody>
                     <tfoot>
                         <tr  bgcolor="#87CEEB" align="center">
-                            <th colspan="3">Fin de la liste</th>
+                            <th colspan="3">Total budget:</th>
+                            <th colspan="1">$$$</th>
                         </tr>
                     </tfoot>
                 </table>

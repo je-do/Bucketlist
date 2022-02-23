@@ -25,7 +25,7 @@ class MainController extends AbstractController
     public function about(): Response
     {
         return $this->render('main/about.html.twig', [
-            'titre' => 'About us',
+            'titre' => 'Que dire...',
         ]);
     }
 }

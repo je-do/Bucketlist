@@ -15,9 +15,9 @@ class WishController extends AbstractController
     {
 
         $bucketlist = [
-                0 => ["pays" => "Japon", "activite" => "escalader le Mont Fuji"],
-                1 =>["pays" => "USA", "activite" => "visiter le Grand Canyon"],
-                2 =>["pays" => "Suisse", "activite" => "manger du chocolat en short"],
+                0 => ["pays" => "Japon", "activite" => "escalader le Mont Fuji","budget" => "3000", "date"=> "05/03/22"],
+                1 =>["pays" => "USA", "activite" => "visiter le Grand Canyon", "budget" => "2500", "date"=> "20/05/22"],
+                2 =>["pays" => "Suisse", "activite" => "manger du chocolat en short", "budget" => "1000", "date"=> "25/12/22"],
 
             ];
         
@@ -33,7 +33,7 @@ class WishController extends AbstractController
     public function detail(): Response
     {
         return $this->render('wish/detail.html.twig' , [
-            'titre' => 'Detail',
+            'titre' => 'Voici les détails !',
         ]);
     }
 
